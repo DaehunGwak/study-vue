@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=2, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      // Reactivity (vue 핵심)
+      // : 데이터의 변화를 감지해서 바로 화면에서 갱신
+      // 아래는 직접 구현한 reactivity
+
+      /**
+      Object.defineProperty(대상 객체, 객체의 속성, {
+        // 정의할 내용
+      })
+      */
+
+      var div = document.querySelector("#app");
+      var viewModel = {};
+
+      // js 즉시실행: 스코프 관리에 좋음
+      (function() {
+
+        function init() {
+          Object.defineProperty(viewModel, 'str', {
+            // 속성 접근자
+            get: function() {
+              console.log('접근');
+            },
+            // 속성 할당자
+            set: function(newValue) {
+              console.log('할당', newValue);
+              render(value);
+            },
+          })
+        }
+
+        function render(value) {
+          div.innerHTML = value;
+        }
+
+        init();
+    });
+      
+    </script>
+  </body>
+</html>

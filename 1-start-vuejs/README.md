@@ -24,3 +24,12 @@ https://github.com/joshua1988/learn-vue-js
 - Prettier
 - Auto Close Tag
 - Atom Keymap
+
+## vue-form
+
+```sh
+vue create vue-form (default)
+cd vue-form
+npm run serve
+npm install axios
+```
