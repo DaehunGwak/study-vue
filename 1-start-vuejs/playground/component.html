@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>component</title>
 </head>
 <body>
   <div id="app">
     <app-header></app-header>
     <app-content></app-content>
+    <app-footer></app-footer>
     {{ message }}
   </div>
 
@@ -27,6 +28,13 @@
 
     var vm = new Vue({
       el: '#app',
+      components: { // 지역 컴포넌트
+        // 'key': 'value'
+        // 'component name': component content
+        'app-footer': {
+          template: '<footer>app-footer</footer>'
+        }
+      },
       data: {
         message: "hi",
       }

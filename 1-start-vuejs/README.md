@@ -25,6 +25,11 @@ https://github.com/joshua1988/learn-vue-js
 - Auto Close Tag
 - Atom Keymap
 
+## 컴포넌트 통신
+
+- 상위에서 하위로 `데이터`를 내려줌 (프롭스 속성)
+- 하위에서 상위로 `이벤트`를 올려줌 (이벤트 발생)
+
 ## vue-form
 
 ```sh
