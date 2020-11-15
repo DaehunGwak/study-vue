@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vue-way</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script>
+    var div = document.querySelector('#app');
+    var viewModel = {};
+
+    // 즉시 실행 (IIFE: Immediately Invoked Function Expression)
+    // 유효 범위를 지정 가능
+    (function() {
+
+      function init() {
+        Object.defineProperty(viewModel, 'str', {
+          get: function() {
+            console.log('access');
+          },
+          set: function(value) {
+            console.log('allocator', value);
+            render(value);
+          },
+        });
+      }
+
+      function render(value) {
+        div.innerHTML = value;
+      }
+
+      init();
+    })();
+
+    // render("out scoped: call render"); // Uncaught ReferenceError: render is not defined
+
+    // Reactivity 직접 구현해보기
+    // Reactivity란? 
+    // Object.defineProperty(대상 객체, 객체 속성, {정의할 내용});
+    // Object.defineProperty(viewModel, 'str', {
+    //   // 속성 접근자 동작 정의 `viewModel.str` 할때마다 동작 정의
+    //   get: function() {
+    //     console.log('access');
+    //   },
+    //   // 속성 할당자 동작 정의
+    //   set: function(value) {
+    //     console.log('allocator', value);
+    //     div.innerHTML = value;
+    //   },
+    // });
+  </script>
+</body>
+</html>
