@@ -10,6 +10,7 @@
 > 영어가 어려워 한국어로 노트가 필요한 부분은 아래에 정리합니다.
 
 - [[note] 01. What is Vue](./day-01/note.md)
+- [[note] 02. The Vue Instance - Data](./day-02/note.md)
 
 > 아래 부턴 원본 README.md 입니다.
 
