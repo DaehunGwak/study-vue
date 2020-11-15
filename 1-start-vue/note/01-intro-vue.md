@@ -19,3 +19,8 @@
 
 - data의 변화를 감지하면 DOM 에 내용을 갱신해주는 것
 - Vue에서 data 속성을 정의하면 자동으로 Reactivity를 지원하는 getter/setter를 생성해줌
+
+## 실습코드
+
+- [기존 웹 dom 갱신](../playground/web-dev.html)
+- [Ractivity 구현](../playground/vue-way.html)
