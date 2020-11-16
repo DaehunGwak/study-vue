@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>component-same-level</title>
+</head>
+<body>
+  <div id="app">
+    <app-header v-bind:props-num="num"></app-header>
+    <app-content v-on:update="updateNum"></app-content>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    var appHeader = {
+      props: ['propsNum'],
+      template: '<p>app-header: {{ propsNum }}</p>'
+    };
+
+    var appContent = {
+      template: `<input 
+        type="text"
+        v-model="contentNum"
+        v-on:input="changeInput">
+      `,
+      data: () => {
+        return {
+          contentNum: 0,
+        };
+      },
+      methods: {
+        changeInput(event) {
+          this.$emit('update', this.contentNum);
+        },
+      },
+    };
+
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        num: 0,
+      },
+      components: {
+        appHeader,
+        appContent,
+      },
+      methods: {
+        updateNum(value) {
+          this.num = value;
+        },
+      },
+    });
+  </script>
+</body>
+</html>
