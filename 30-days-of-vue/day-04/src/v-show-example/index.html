@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  <body>
+    <div id="app">
+      <h2>{{ greeting }}</h2>
+      <p v-show="city === 'Daegu'">
+        by {{ user }} who lives in {{ city }}
+      </p>
+      <p v-show="city === 'Seongnam'">
+        by {{ user }} who works in {{ city }}
+      </p>
+      <img v-bind:src="cityImage" alt="image of city">
+      <button v-on:click="changeCity">is it wrong?</button>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
