@@ -15,3 +15,4 @@
 - [[note] 04. Vue Directives](./day-04/note.md)
 - [[note] 05. List Rendering with `v-for`](./day-05/note.md)
 - [[note] 06. Form Handling with `v-model`](./day-06/note.md)
+- [[note] 07. Vue Devtools](./day-07/note.md)
