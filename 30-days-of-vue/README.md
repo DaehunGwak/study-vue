@@ -13,3 +13,4 @@
 - [[note] 02. The Vue Instance - Data](./day-02/note.md)
 - [[note] 03. The Vue Instance - Data Driven Applications](./day-03/note.md)
 - [[note] 04. Vue Directives](./day-04/note.md)
+- [[note] 04. List Rendering with `v-for`](./day-05/note.md) 
