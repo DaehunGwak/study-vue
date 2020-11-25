@@ -7,4 +7,4 @@
 - [03. 컴포넌트](./03-component.md)
 - [04. 컴포넌트 통신 방법 - 기본](./04-component-communication-basic.md)
 - [05. 컴포넌트 통신 방법 - 응용](./05-component-communication-advance.md)
-  
+- [06. Vue Router](./06-vue-router.md)
