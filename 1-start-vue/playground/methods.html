@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <button v-on:click="clickEvent">click me</button>
+    <input type="text" v-on:keyup.enter="keyupEvent">
+  </div>
+
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      methods: {
+        clickEvent(event) {
+          console.log('clickEvent');
+          console.log(event);
+        },
+        keyupEvent(event) {
+          console.log('keyupEvent');
+          console.log(event);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
