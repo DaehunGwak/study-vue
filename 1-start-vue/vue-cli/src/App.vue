@@ -1,30 +1,29 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <hello-world msg="Welcome to Your Vue.js App"></hello-world>
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"> -->
+  <div>
+    <app-header :title="str" @renew="renewStr"></app-header>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppHeader from "./components/AppHeader.vue";
 
 export default {
-  name: 'App',
+  data() {
+    return {
+      str: 'Title using root data 🌱',
+    };
+  },
   components: {
-    HelloWorld,
-    // 'hello-world': HelloWorld
+    AppHeader,
+  },
+  methods: {
+    renewStr() {
+      this.str = 'Another Title by renew event 🥳'
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
