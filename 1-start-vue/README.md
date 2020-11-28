@@ -4,7 +4,6 @@
 - [실습 github repo](https://github.com/joshua1988/learn-vue-js)
 - [강의 노트](./note)
 
-
 ## vscode set-up
 
 - Vetur
